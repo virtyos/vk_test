@@ -1,0 +1,1 @@
+<?php foreach ($sites as $k=>$site): ?>  <li data-id="<?php echo $site['id']; ?>">    <a href="sitePage.php?site=<?php echo $site['id']; ?>"><?php echo $site['url']; ?></a>  </li><?php endforeach;?>
