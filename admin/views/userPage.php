@@ -13,6 +13,7 @@
 <div class="graph_container">
   Статистика по просмотрам сайтов за неделю
   <br><br>
+  <?php if (!empty($userStats)): ?>
   <table class="user_looked_table">
     <thead>
       <tr>
@@ -28,7 +29,7 @@
       </tr>
     </thead>
     <tbody>
-    <? foreach ($userStats as $k => $stat):?>
+    <?php foreach ($userStats as $k => $stat):?>
       <tr>
         <td>
           <?php if ($stat['site']):?>
@@ -45,4 +46,7 @@
     <?php endforeach; ?>
     </tbody>
   </table>
+  <?php else: ?>
+    Данных нет. Наверно, пользователь еще ничего не посетил. Хотя это странно...
+  <?php endif; ?>
 </div>
